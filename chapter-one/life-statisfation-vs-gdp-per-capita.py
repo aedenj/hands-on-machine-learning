@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Jan  4 14:56:18 2020
-
-@author: aeden
-"""
 
 import numpy as np
 import pandas as pd
@@ -24,11 +19,11 @@ def prepare_country_stats(oecd_bli, gdp_per_capita):
     keep_indices = list(set(range(36)) - set(remove_indices))
     return full_country_stats[["GDP per capita", 'Life satisfaction']].iloc[keep_indices]
 
-url_bl = "~/projects/aedenj/hands-on-machine-learning/chapter-one/better-life-index.csv"
+url_bl = "better-life-index.csv"
 betterlife = pd.read_csv(url_bl,thousands=',')
 
 
-url_imf = '~/projects/aedenj/hands-on-machine-learning/chapter-one/imf-gdp-data.xls'
+url_imf = 'imf-gdp-data.xls'
 imf = pd.read_csv(url_imf, sep='\t', encoding = 'latin1', thousands=',', na_values='n/a')
 
 

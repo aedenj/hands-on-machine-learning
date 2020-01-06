@@ -51,4 +51,3 @@ model.fit(X, y)
 X_new = [[22587]]  # Cyprus' GDP per capita
 print(model.predict(X_new)) # outputs [[ 5.96242338]]
 
-
